@@ -15,7 +15,7 @@ let sum = a + b; // Addition of a and b
 let difference = a - b; // Substraction a from b
 let product = a * b; // Multiplication of a and b
 let quotient = a / b; // Dividation of a by b
-let reminder = a % b; // Modulus of a by b 
+let reminder = a % b; // Modulus of a by b
 
 
 console.log(`
