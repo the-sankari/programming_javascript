@@ -27,5 +27,15 @@ Divide: ${quotient}
 Remainder: ${reminder}
 `);
 
+/*
+OUTPUT
+----------
+Add: 15
+Substruction: 5
+Product: 50
+Multiply: 50
+Divide: 2
+Remainder: 0
 
+*/
 
