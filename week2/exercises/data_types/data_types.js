@@ -17,18 +17,36 @@ let isStudent = true;
 const hobbies = ["Football", "Basketball", "Travel"];
 
 const info = {
-    schoolName: "Business College Helsinki",
-    grade: "S"
+  schoolName: "Business College Helsinki",
+  grade: "S",
 };
 
-console.log(`Name: ${name} --> Type: ${typeof(name)},\nAge: ${age} --> Type: ${typeof(age)},\nStudent Status: ${isStudent} --> Type: ${typeof(isStudent)} \n`);
+console.log(
+  `Name: ${name} --> Type: ${typeof name},\nAge: ${age} --> Type: ${typeof age},\nStudent Status: ${isStudent} --> Type: ${typeof isStudent} \n`
+);
 
-console.log(`Hobbis: Type --> ${typeof(hobbies)}
-${hobbies[0]} --> Type: ${typeof(hobbies)}
-${hobbies[1]} --> Type: ${typeof(hobbies)}
-${hobbies[2]} --> Type: ${typeof(hobbies)}\n`);
+console.log(`Hobbis: Type --> ${typeof hobbies}
+${hobbies[0]} --> Type: ${typeof hobbies}
+${hobbies[1]} --> Type: ${typeof hobbies}
+${hobbies[2]} --> Type: ${typeof hobbies}\n`);
 
-console.log(`Info: Type: --> ${typeof(info)}
-School Name: ${info.schoolName} --> Type: ${typeof(info.schoolName)}
-Grade: ${info.grade}  --> Type: ${typeof(info.grade)}\n`);
+console.log(`Info: Type: --> ${typeof info}
+School Name: ${info.schoolName} --> Type: ${typeof info.schoolName}
+Grade: ${info.grade}  --> Type: ${typeof info.grade}\n`);
 
+/*
+            Out put
+-------------------------------
+Name: Sree --> Type: string,
+Age: 20 --> Type: number,
+Student Status: true --> Type: boolean 
+
+Hobbis: Type --> object
+Football --> Type: object
+Basketball --> Type: object
+Travel --> Type: object
+
+Info: Type: --> object
+School Name: Business College Helsinki --> Type: string
+Grade: S  --> Type: string
+*/
