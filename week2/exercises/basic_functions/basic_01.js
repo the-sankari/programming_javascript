@@ -1,8 +1,8 @@
 // Kajol Sutra Dhar
 
 // Write the function sum such that it returns the sum of a and b.
-function sum(x , y) {
-    return x + y;
+function sum(a , b) {
+    return a + b;
 }
 
 // sample usage - do not modify
