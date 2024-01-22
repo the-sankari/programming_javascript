@@ -5,10 +5,10 @@ Implement the function canVote such that it returns true whenever the age 18 or 
 */
 
 function canVote(age) {
-    if (age >= 18) {
-        return true;
+    if (age >= 18) { // Checks wheather the age is equel or above 18
+        return true; // Return true if the age is equel or above 18
     }
-    return false;
+    return false;   // Return false if the age is not equel or not above 18, 
 }
 
 // Sample usage - do not modify
