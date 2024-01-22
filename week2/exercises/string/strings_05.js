@@ -4,8 +4,8 @@ Refine the getLastCharacter function so that it returns the last character from 
  */
 
 function getLastCharacter(name) {
-    let index = name.length -1
-    return name.charAt(index);
+  let index = name.length -1;
+  return name.charAt(index);
 }
 
 // Sample usage - do not modify
