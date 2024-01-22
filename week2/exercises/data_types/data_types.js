@@ -22,17 +22,25 @@ const info = {
 };
 
 console.log(
-  `Name: ${name} --> Type: ${typeof name},\nAge: ${age} --> Type: ${typeof age},\nStudent Status: ${isStudent} --> Type: ${typeof isStudent} \n`
+  `
+Name: ${name} --> Type: ${typeof name},
+Age: ${age} --> Type: ${typeof age},
+Student Status: ${isStudent} --> Type: ${typeof isStudent}
+  `
 );
 
-console.log(`Hobbis: Type --> ${typeof hobbies}
+console.log(`
+Hobbis: Type --> ${typeof hobbies}
 ${hobbies[0]} --> Type: ${typeof hobbies}
 ${hobbies[1]} --> Type: ${typeof hobbies}
-${hobbies[2]} --> Type: ${typeof hobbies}\n`);
+${hobbies[2]} --> Type: ${typeof hobbies}
+`);
 
-console.log(`Info: Type: --> ${typeof info}
+console.log(`
+Info: Type: --> ${typeof info}
 School Name: ${info.schoolName} --> Type: ${typeof info.schoolName}
-Grade: ${info.grade}  --> Type: ${typeof info.grade}\n`);
+Grade: ${info.grade}  --> Type: ${typeof info.grade}
+`);
 
 /*
             Out put
