@@ -7,6 +7,8 @@ Returns a string combining the number and the appropriately pluralized form of t
 
  */
 
+// Applies for regular nouns only
+
 function pluralize(noun, number) {
   if (number > 1) {
     return `${number} ${noun}s`;
