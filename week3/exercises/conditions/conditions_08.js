@@ -11,11 +11,11 @@ Returns a string combining the number and the appropriately pluralized form of t
 
 function pluralize(noun, number) {
   if (number > 1) {
-    return `${number} ${noun}s`;
-  } else if (number === 1) {
-    return `${number} ${noun}`;
+    return `${number} ${noun}s`; // Checks if the number of noun is plural
+  } else if (number === 1) {     
+    return `${number} ${noun}`;  //Checks if the number of noun is singular
   } else {
-    return `no ${noun}`;
+    return `no ${noun}`;         // Checks if the number of noun is zero, no noun
   }
 }
 
