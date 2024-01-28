@@ -6,10 +6,11 @@ const askBtnElement = document.querySelector(".btnAsk");
 const printUserInput = document.querySelector("#printUserInput");
 
 const showResponse = document.querySelector("#response");
-const smashImg = document.querySelector(".smash");
+// const smashImg = document.querySelector(".smash");
 
 const errMsg = document.querySelector(".warning"); // Error massage
 const emojiContainer = document.querySelector("#emojiContainer");
+const playLine = document.querySelector(".playLine");
 
 // Function for happy emojies
 
@@ -78,7 +79,7 @@ function playMagicBall() {
 
 function display() {
   const userQuestion = userInput.value.trim(); // Remove leading and trailing whitespaces
-
+  playLine.style.display = "none";
   if (
     userQuestion === "" ||
     userQuestion.charAt(userQuestion.length - 1) !== "?"
@@ -105,7 +106,7 @@ function display() {
   userInput.value = "";
 }
 
-// Function to spinning the image 
+// Function to spinning the image
 // Ui spinning idea credit from Adel Ansari
 function spinImage() {
   // Add the "spin" class to the askBtnElement
@@ -130,7 +131,6 @@ function jarkImage() {
     errMsg.classList.remove("jark");
   }, 2000);
 }
-
 
 // Add a click event listener to the askBtnElement
 askBtnElement.addEventListener("click", display);

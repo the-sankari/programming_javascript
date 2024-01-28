@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #111;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 
 header {
@@ -11,26 +18,45 @@ header {
   max-width: 600px;
   max-height: 200px;
   margin: 12px px;
-  /* background-color: #FF4500; */
-  /* border: 1px solid; */
   text-align: center;
   position: relative;
 }
 
-.heading {
-  /* max-width: ; */
-  height: 150px;
+@keyframes appearance {
+  0% {
+    height: 100px;
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+    height: 160px;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+.heading {
+  height: 150px;
+  animation: appearance 2s ease-out forwards; 
+
+}
+
+
 header .main-logo {
-  width: 120px;
+  width: 150px;
   position: absolute;
   left: 0;
   margin: 20px 0 0 20px;
 }
 
+
+
 main {
-  height: 75vh;
+  height: 70vh;
   width: 70vw;
   background: linear-gradient(#fffff0, #8b0000 70%);
   padding: 20px 0;
@@ -43,25 +69,23 @@ main {
 
 main .magic-section {
   width: 90%;
-  /* border: 1px solid #fff; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding: 20px;
   position: relative;
 }
 
 .inputContainer {
-  /* background-color: #c9c2ce; */
   height: 300px;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 #userInput {
-  height: 40px;
+  height: 50px;
   width: 70%;
   padding: 5px 5px;
   margin: 10px 10px;
@@ -70,13 +94,14 @@ main .magic-section {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
 }
+
 #emojiContainer {
-  /* background-color: #f5f5dc; */
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .btnAsk,
 .mainBtn,
 .btn {
@@ -86,14 +111,13 @@ main .magic-section {
   border-radius: 6px;
   font-size: 24px;
   border-radius: 100px;
-  /* box-shadow: 0 0 10px 5px #766255; */
   cursor: pointer;
   background: transparent;
 }
+
 .btnAsk:hover,
 .mainBtn:hover,
 .btn:hover {
-  /* color: #001f3f; */
   box-shadow: 0 0 10px 5px #766255a2;
 }
 
@@ -128,25 +152,13 @@ main .magic-section {
   }
 }
 
-@keyframes swing {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 /* Apply the jarking animation to the element with the "jark" class */
 .jark {
   animation: jark 0.5s ease-in-out 4;
 }
-.swing {
-  animation: 0.5s ease-in-out 4;
-}
+
 
 .output {
   position: relative;
@@ -181,14 +193,56 @@ main .magic-section {
   /* transform:skew(5); */
 }
 
+
+
+@keyframes slideInFromBottomAndBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.6;
+    transform: translateY(-10px); /* Bounce up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Return to normal position */
+  }
+}
+
+.playLine {
+  font-size: 70px;
+  color: #fffff0;
+  font-family: cursive;
+  opacity: 0;
+  animation: slideInFromBottomAndBounce 2s ease-out forwards; 
+}
+
+/* footer style  */
+
+footer {
+  color: #fffff0;
+  min-height: 80px;
+  max-height: 120px;
+  width: 100vw;
+  /* background-color: #001f3f; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 767px) {
   header .main-logo {
-    width: 60px; /* Adjust the logo size for mobile */
+    width: 100px; /* Adjust the logo size for mobile */
     margin: 10px 0 0 10px;
   }
 
-  .heading{
+  .heading {
     height: 70px;
   }
 
@@ -202,6 +256,13 @@ main .magic-section {
 
   #userInput {
     width: 90%;
+    height: 40px;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
   }
 
   #emojiContainer {
@@ -218,6 +279,9 @@ main .magic-section {
 
   .output {
     height: auto; /* Adjust the height for mobile */
+  }
+  .playLine {
+    font-size: 22px;
   }
 }
 
