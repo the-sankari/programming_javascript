@@ -14,8 +14,8 @@ const emojiContainer = document.querySelector("#emojiContainer");
 // Function for happy emojies
 function happyEmojis() {
   // Display a random emoji image
-  const randomEmojiIndex = Math.floor(Math.random() * 9) + 1; // Assuming you have images named emoji1.png, emoji2.png, ..., emoji8.png
-  const emojiImagePath = `./images/emoji/happy${randomEmojiIndex}.png`;
+  const randomEmojiIndex = Math.floor(Math.random() * 8) + 1; 
+  const emojiImagePath = `./images/emoji/happy${randomEmojiIndex}.png`; // from chatgpt
 
   // Create an img element to display the emoji
   const emojiImage = document.createElement("img");
