@@ -1,0 +1,175 @@
+body {
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  min-width: 100%;
+  max-width: 600px;
+  max-height: 200px;
+  margin: 12px 12px;
+  /* background-color: #FF4500; */
+  /* border: 1px solid; */
+  text-align: center;
+  position: relative;
+}
+
+.heading{
+  /* max-width: ; */
+  height: 150px;
+}
+
+header .main-logo {
+  width: 120px;
+  position: absolute;
+  left: 0;
+  margin: 20px 0 0 20px;
+}
+
+main {
+  height: 75vh;
+  width: 70vw;
+  background: linear-gradient(#fffff0, #8B0000 70%);
+  padding: 20px 0;
+  margin: 20px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px grey;
+}
+
+main .magic-section {
+  width: 90%;
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.inputContainer {
+  /* background-color: #c9c2ce; */
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#userInput {
+  height: 40px;
+  width: 70%;
+  padding: 5px 5px;
+  margin: 10px 10px;
+  border-radius: 25px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+#emojiContainer {
+  /* background-color: #f5f5dc; */
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnAsk,
+.mainBtn, .btn {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 24px;
+  border-radius: 100px;
+  /* box-shadow: 0 0 10px 5px #766255; */
+  cursor: pointer;
+  background: transparent;
+}
+.btnAsk:hover,
+.mainBtn:hover, .btn:hover {
+  /* color: #001f3f; */
+  box-shadow: 0 0 10px 5px #766255a2;
+}
+
+/* Define a CSS class for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the spinning animation to the element with the "spin" class */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes jark {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 10px);
+  }
+  50% {
+    transform: translate(-10px, -10px);
+  }
+  75% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+
+@keyframes swing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Apply the jarking animation to the element with the "jark" class */
+.jark {
+  animation: jark 0.5s ease-in-out 4;
+}
+.swing {
+  animation:  0.5s ease-in-out 4;
+}
+
+.output {
+  position: relative;
+  margin-top: 20px;
+  height: 400px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#printUserInput,
+#response,
+.warning {
+  background-color: #ffffff;
+  color: #001f3f;
+  max-width: 100%;
+  padding: 6px 10px;
+  margin: 10px 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  display: none;
+}
+
+.warning {
+  background-color: #fff;
+  color: rgb(182, 15, 15);
+  /* transform:skew(5); */
+}
