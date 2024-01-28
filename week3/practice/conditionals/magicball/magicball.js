@@ -12,9 +12,10 @@ const errMsg = document.querySelector(".warning"); // Error massage
 const emojiContainer = document.querySelector("#emojiContainer");
 
 // Function for happy emojies
+
 function happyEmojis() {
   // Display a random emoji image
-  const randomEmojiIndex = Math.floor(Math.random() * 8) + 1; 
+  const randomEmojiIndex = Math.floor(Math.random() * 8) + 1;
   const emojiImagePath = `./images/emoji/happy${randomEmojiIndex}.png`; // from chatgpt
 
   // Create an img element to display the emoji
@@ -73,6 +74,8 @@ function playMagicBall() {
   showResponse.textContent = `Magic 8 ball says: ${response} `;
 }
 
+// Display Functiom
+
 function display() {
   const userQuestion = userInput.value.trim(); // Remove leading and trailing whitespaces
 
@@ -102,26 +105,31 @@ function display() {
   userInput.value = "";
 }
 
-// Function to handle button click
+// Function to spinning the image
 function spinImage() {
   // Add the "spin" class to the askBtnElement
   askBtnElement.classList.add("spin");
 
-  // Remove the "spin" class after a delay (adjust the delay based on your animation duration)
+  // Remove the "spin" class after a delay
   setTimeout(() => {
     askBtnElement.classList.remove("spin");
   }, 1000);
 }
+
+// Function to jarking the response
+
 function jarkImage() {
   // Add the "spin" class to the askBtnElement
   askBtnElement.classList.add("spin");
   errMsg.classList.add("jark");
-  // Remove the "spin" class after a delay (adjust the delay based on your animation duration)
+  // Remove the "spin" class after a delay
   setTimeout(() => {
     askBtnElement.classList.remove("jark");
     askBtnElement.classList.remove("spin");
     errMsg.classList.remove("jark");
   }, 2000);
 }
+
+
 // Add a click event listener to the askBtnElement
 askBtnElement.addEventListener("click", display);
