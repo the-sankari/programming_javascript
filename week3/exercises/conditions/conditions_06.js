@@ -7,9 +7,8 @@ Develop a function called greaterNum which:
 
  */
 
- function greaterNum(number1, number2) {
-    let largerNumber = number1 > number2 ? number1 : number2;
-   return largerNumber;
+ function greaterNum(num1, num2) {
+   return num1 > num2 ? num1 : num2;;
  }
 
 // Sample usage - do not modify
