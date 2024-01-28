@@ -105,7 +105,8 @@ function display() {
   userInput.value = "";
 }
 
-// Function to spinning the image
+// Function to spinning the image 
+// Ui spinning idea credit from Adel Ansari
 function spinImage() {
   // Add the "spin" class to the askBtnElement
   askBtnElement.classList.add("spin");
