@@ -2,20 +2,34 @@
 
 const distance = document.querySelector("#distance");
 const time = document.querySelector("#time");
-
+const submitBtnElement = document.querySelector(".btnSubmit");
 const showDistance = document.querySelector(".distance");
 const showTime = document.querySelector(".time");
 const showSpeed = document.querySelector(".speed");
-const submitBtnElement = document.querySelector(".btnSubmit");
 
-// const heading = document.querySelector(".header");
-
-submitBtnElement.addEventListener("click", () => {
+function calculateSpeed() {
   const distanceValue = parseFloat(distance.value);
   const timeValue = parseFloat(time.value);
-  const speed = distanceValue / timeValue;
-  showDistance.textContent = `Distance: ${distance.value} km`;
-  showTime.textContent = `Time: ${time.value} hour`;
-  showSpeed.textContent = speed;
-  console.log(speed);
+
+  if (!isNaN(distanceValue) && !isNaN(timeValue) && timeValue !== 0) {
+    const result = distanceValue / timeValue;
+    return result.toFixed(2);
+  } else if (isNaN(distanceValue) || distanceValue === 0) {
+    alert(`Please enter a non-zero and valid distance value`);
+  } else if (isNaN(timeValue) || timeValue === 0) {
+    alert(`Please enter a non-zero and valid time value`);
+  }
+}
+
+const displaySpeed = () =>{
+    const speed = calculateSpeed();
+    if (speed !== undefined) {
+      showDistance.textContent = `Distance: ${distance.value} km`;
+      showTime.textContent = `Time: ${time.value} hour`;
+      showSpeed.textContent = `Speed: ${speed} km/h`;
+    }
+}
+
+submitBtnElement.addEventListener("click", () => {
+displaySpeed();
 });
