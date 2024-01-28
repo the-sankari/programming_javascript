@@ -10,14 +10,14 @@ header {
   min-width: 100%;
   max-width: 600px;
   max-height: 200px;
-  margin: 12px 12px;
+  margin: 12px px;
   /* background-color: #FF4500; */
   /* border: 1px solid; */
   text-align: center;
   position: relative;
 }
 
-.heading{
+.heading {
   /* max-width: ; */
   height: 150px;
 }
@@ -32,7 +32,7 @@ header .main-logo {
 main {
   height: 75vh;
   width: 70vw;
-  background: linear-gradient(#fffff0, #8B0000 70%);
+  background: linear-gradient(#fffff0, #8b0000 70%);
   padding: 20px 0;
   margin: 20px 0 50px 0;
   display: flex;
@@ -78,7 +78,8 @@ main .magic-section {
   align-items: center;
 }
 .btnAsk,
-.mainBtn, .btn {
+.mainBtn,
+.btn {
   height: 200px;
   width: 200px;
   margin-bottom: 10px;
@@ -90,7 +91,8 @@ main .magic-section {
   background: transparent;
 }
 .btnAsk:hover,
-.mainBtn:hover, .btn:hover {
+.mainBtn:hover,
+.btn:hover {
   /* color: #001f3f; */
   box-shadow: 0 0 10px 5px #766255a2;
 }
@@ -126,11 +128,16 @@ main .magic-section {
   }
 }
 
-
 @keyframes swing {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Apply the jarking animation to the element with the "jark" class */
@@ -138,7 +145,7 @@ main .magic-section {
   animation: jark 0.5s ease-in-out 4;
 }
 .swing {
-  animation:  0.5s ease-in-out 4;
+  animation: 0.5s ease-in-out 4;
 }
 
 .output {
@@ -172,4 +179,80 @@ main .magic-section {
   background-color: #fff;
   color: rgb(182, 15, 15);
   /* transform:skew(5); */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  header .main-logo {
+    width: 60px; /* Adjust the logo size for mobile */
+    margin: 10px 0 0 10px;
+  }
+
+  .heading{
+    height: 70px;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .inputContainer {
+    height: auto; /* Adjust the height for mobile */
+  }
+
+  #userInput {
+    width: 90%;
+  }
+
+  #emojiContainer {
+    width: 80%;
+  }
+
+  .btnAsk,
+  .mainBtn,
+  .btn {
+    height: 100px; /* Adjust button height for mobile */
+    width: 100px; /* Adjust button width for mobile */
+    font-size: 16px; /* Adjust button font size for mobile */
+  }
+
+  .output {
+    height: auto; /* Adjust the height for mobile */
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header .main-logo {
+    width: 100px; /* Adjust the logo size for tablets */
+    margin: 15px 0 0 15px;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  .inputContainer {
+    height: 250px; /* Adjust the height for tablets */
+  }
+
+  #userInput {
+    width: 80%;
+  }
+
+  #emojiContainer {
+    width: 70%;
+  }
+
+  .btnAsk,
+  .mainBtn,
+  .btn {
+    height: 150px; /* Adjust button height for tablets */
+    width: 150px; /* Adjust button width for tablets */
+    font-size: 20px; /* Adjust button font size for tablets */
+  }
+
+  .output {
+    height: 300px; /* Adjust the height for tablets */
+  }
 }
