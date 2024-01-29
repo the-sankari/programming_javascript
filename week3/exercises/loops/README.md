@@ -2,7 +2,7 @@
 
     To run the promtable solution uncomment the respective file script from this html fle
 
-[HTML](./loops.html)
+[HTML File](./loops.html)
 
 1.  Create a program that outputs all odd, positive numbers less than 100, starting from 1, such as 1, 3, 5, 7, 9, 11, and so on.
 
