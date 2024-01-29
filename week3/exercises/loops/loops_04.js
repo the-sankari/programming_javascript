@@ -8,7 +8,11 @@ for (let i = 1; i <= 20; i++) {
     let userInput = parseFloat(prompt(`Enter 20 number`));
     if (userInput % 2 == 0) {
         evenNum++;
+    }else{
+        console.log(`Invalid input. Please enter a valid number.`);
+        i--; // Decrement i to repeat the current iteration
     }
+
 }
 
 console.log(`Number of even number: ${evenNum}`)
