@@ -1,0 +1,48 @@
+<!-- 
+
+HTML:
+- Make a basic HTML
+- Include an <input type="text"> element where the user can enter text.
+- Add a <div> element with an ID (e.g., id="displayText"), which will be used to display the input field's value.
+- Remember to connect HTML and JS files
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic DOM 3</title>
+
+    <style>
+        input{
+            width: 50%;
+            height: 40px;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px 5px;
+            margin:20px 0;
+            font-size: 24px;
+        }
+
+        div{
+            background-color: aqua;
+            width: 100%;
+            height: inherit;
+            font-size: 24px;
+            text-wrap: wrap;
+            height: 200px;
+            margin: 20px 0;
+            padding: 10px ;
+        }
+    </style>
+
+
+  </head>
+  <body>
+    <input type="text" placeholder="Enter your text " id="user-text" />
+    <div id="displayText"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
