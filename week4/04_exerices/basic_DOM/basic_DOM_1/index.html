@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic DOM 1</title>
+    <style>
+      body{
+        background-color: antiquewhite;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #content, button{
+        width: 60%;
+        height: 80px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+      }
+
+      button{
+        height: 50px;
+        width: 50%;
+        font-size: 24px;
+        border-radius: 6px;
+        background-color: #d179a0;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">Change the text</div>
+    <button onclick="changeContent()">Change text</button>
+    <script src="script.js"></script>
+  </body>
+</html>
