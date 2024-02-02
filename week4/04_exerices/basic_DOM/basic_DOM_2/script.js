@@ -10,3 +10,5 @@ When the button is clicked, the function should:
 Ensure the input field is cleared after adding the fruit to the list.
 
 */
+
+
