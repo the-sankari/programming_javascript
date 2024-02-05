@@ -11,13 +11,14 @@ const showResponse = document.querySelector("#response");
 const errMsg = document.querySelector(".warning"); // Error massage
 const emojiContainer = document.querySelector("#emojiContainer");
 const playLine = document.querySelector(".playLine");
+const hide = document.querySelector(".hide");
 
 // Function for happy emojies
 
 function happyEmojis() {
   // Display a random emoji image
-  const randomEmojiIndex = Math.floor(Math.random() * 8) + 1;
-  const emojiImagePath = `./images/emoji/happy${randomEmojiIndex}.png`; // from chatgpt
+  const randomEmojiIndex = Math.floor(Math.random() * 8);
+  const emojiImagePath = `./images/emoji/happy${randomEmojiIndex+1}.png`; // from chatgpt
 
   // Create an img element to display the emoji
   const emojiImage = document.createElement("img");
@@ -35,44 +36,42 @@ function happyEmojis() {
   }, 3000);
 }
 
-// Function for magice ball response
-
 function playMagicBall() {
-  let randomNumber = Math.floor(Math.random() * 8);
-  let response = "";
-  switch (randomNumber) {
-    // All the reponse quotes are from google
+  const response = [
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes, definitely.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes, for sure.",
+    "Yes.",
+    "Maybe not now, but yes later.",
+    "I'm not sure, try again.",
+    "Ask again later.",
+    "Cannot predict now.",
+    "Don't count on it.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful.",
+    "Absolutely!",
+    "Certainly!",
+    "Without a doubt!",
+    "Most certainly!",
+    "It is a possibility.",
+    "The stars align for a yes.",
+    "The future is hazy, ask again.",
+    "Better not to tell you now.",
+    "Concentrate and ask again.",
+    "My answer is no.",
+    "Absolutely not!",
+    "The outlook is bleak.",
+  ];
 
-    case 1:
-      response = "Without a doubt.";
-      break;
-    case 2:
-      response = "Yes - definitely.";
-      break;
-    case 3:
-      response = "You may rely on it.";
-      break;
-    case 4:
-      response = "As I see it, yes.";
-      break;
-    case 5:
-      response = "Reply hazy, try again.";
-      break;
-    case 6:
-      response = "Don't count on it.";
-      break;
-    case 7:
-      response = "My sources say no.";
-      break;
-    case 8:
-      response = "My sources say no.";
-      break;
-
-    default:
-      response = "Error: Unable to provide an answer.";
-      break;
-  }
-  showResponse.textContent = `Magic 8 ball says: ${response} `;
+  const randNum = Math.floor(Math.random() * response.length);
+  showResponse.textContent = response[randNum];
 }
 
 // Display Functiom
@@ -84,52 +83,41 @@ function display() {
     userQuestion === "" ||
     userQuestion.charAt(userQuestion.length - 1) !== "?"
   ) {
-    // Check if the input is empty or if the last character is not a question mark
-    jarkImage();
+    animate(askBtnElement, "jark");
+    animate(errMsg, "jark");
     showResponse.style.display = "none";
-    printUserInput.style.display = "none";
+
     errMsg.style.display = "block";
     errMsg.textContent =
       "Error: Please enter a valid question ending with a question mark.";
   } else {
+    animate(loader, 'spin', 'block');
     setTimeout(() => {
+    animate(loader, 'spin', 'none');
       happyEmojis();
     }, 1000);
+
     printUserInput.textContent = `You Asked: ${userQuestion}`;
-    playMagicBall();
-    showResponse.style.display = "block";
-    printUserInput.style.display = "block";
+    animate(showResponse,'hide', 'block');
     errMsg.style.display = "none";
-    spinImage();
+
+    setTimeout(() => {
+      playMagicBall();
+      animate(askBtnElement, "spin", 'block');
+    }, 1000);
   }
 
   userInput.value = "";
 }
 
-// Function to spinning the image
-// Ui spinning idea credit from Adel Ansari
-function spinImage() {
-  // Add the "spin" class to the askBtnElement
-  askBtnElement.classList.add("spin");
+function animate(elements, animation, showHide) {
+  elements.classList.add(animation);
+  elements.style.display = showHide;
 
-  // Remove the "spin" class after a delay
   setTimeout(() => {
-    askBtnElement.classList.remove("spin");
+    elements.classList.remove(animation);
   }, 1000);
-}
-
-// Function to jarking the response
-
-function jarkImage() {
-  // Add the "spin" class to the askBtnElement
-  askBtnElement.classList.add("spin");
-  errMsg.classList.add("jark");
-  // Remove the "spin" class after a delay
-  setTimeout(() => {
-    askBtnElement.classList.remove("jark");
-    askBtnElement.classList.remove("spin");
-    errMsg.classList.remove("jark");
-  }, 2000);
+  return;
 }
 
 // Add a click event listener to the askBtnElement

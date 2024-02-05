@@ -11,7 +11,7 @@ let basePrice = parseInt(cakeType.value);
 // On change method and get integer value of selected element
 cakeType.addEventListener("change", () => {
   basePrice = parseInt(cakeType.value);
-//   console.log(`Base price: ${basePrice}`);
+//   console.log(`Base price: €{basePrice}`);
   updateCal();
 });
 
@@ -33,9 +33,17 @@ function updateCal() {
      return total += toppingPrice;
     }
   });
-//   console.log(`Total price: ${total}`);
+//   console.log(`Total price: €{total}`);
 
   // Display the total price 
-  displayPrice.textContent = `$${total}`;
-  displayPriceBanner.textContent = `$${total}`;
+  displayPrice.textContent = `€${total}`;
+  displayPriceBanner.textContent = `€${total}`;
+  displayPriceBanner.classList.add('animate');
+  displayPriceBanner.style.display = 'block';
+
+  // Reset animation after it finishes
+  setTimeout(() => {
+    displayPriceBanner.classList.remove('animate');
+    // displayPriceBanner.style.display = 'none';
+  }, 2000);
 }
