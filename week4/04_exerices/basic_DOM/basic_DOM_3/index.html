@@ -15,6 +15,9 @@ HTML:
     <title>Basic DOM 3</title>
 
     <style>
+      body{
+        background-color: #d39c9c;
+      }
         input{
             width: 50%;
             height: 40px;
@@ -26,8 +29,8 @@ HTML:
         }
 
         div{
-            background-color: aqua;
-            width: 100%;
+            background-color: #cdd2e3;
+            width: 90%;
             height: inherit;
             font-size: 24px;
             text-wrap: wrap;
@@ -35,13 +38,23 @@ HTML:
             margin: 20px 0;
             padding: 10px ;
         }
+
+        p{
+          width: 100%;
+          border: 1px solid;
+          text-wrap: wrap;
+        }
+
     </style>
 
 
   </head>
   <body>
     <input type="text" placeholder="Enter your text " id="user-text" />
-    <div id="displayText"></div>
+    <input type="text" placeholder="Enter your text " id="user-text2" />
+    <div id="displayText">
+      <p></p>
+    </div>
 
     <script src="script.js"></script>
   </body>

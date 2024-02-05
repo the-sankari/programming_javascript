@@ -21,13 +21,21 @@ The event listener's function should:
 - To have the display update more dynamically (as the user types), consider using the input event instead of or in addition to the change event.  */
 
 const userInput = document.querySelector("#user-text");
-const displayText = document.querySelector("#displayText");
+const displayText = document.querySelector("#displayText > p");
 
-function display(text) {
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
+// function display(text) {
+//   // https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
 
-  displayText.textContent = text.target.value;
+//   displayText.textContent = text.target.value;
+// }
+
+
+// Using arrow function 
+const display = ()=>{
+  let newText = displayText.textContent = value
+  console.log(newText);
 }
+
 
 userInput.addEventListener("input", display);
 

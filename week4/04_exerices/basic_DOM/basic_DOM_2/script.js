@@ -8,10 +8,7 @@ When the button is clicked, the function should:
 - Append the new <li> element to the fruitList <ul>.
 
 Ensure the input field is cleared after adding the fruit to the list.
-
 */
-// Parent container
-const fruitList = document.querySelector("#fruitList");
 
 // Getting the input
 const input = document.querySelector("#fruitInput");
@@ -23,6 +20,9 @@ const addBtn = document.querySelector("#addFruitBtn");
 function addFruitToList() {
   // console.log(input.value);
 
+  // Parent container
+  const fruitList = document.querySelector("#fruitList").trim();
+  
   // Creating new li element
   const newItem = document.createElement("li");
 
@@ -37,4 +37,9 @@ function addFruitToList() {
 }
 
 // Add click event to the add btn
-addBtn.addEventListener("click", addFruitToList);
+input.addEventListener("keydown", (event) => {
+  if (event.key == "Enter") {
+    event.preventDefault();
+    addBtn.addEventListener("click", addFruitToList);
+  }
+});
