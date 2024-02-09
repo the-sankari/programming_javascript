@@ -13,11 +13,17 @@ let teamMembers = ['John', 'Emily', 'Mike', 'Sarah'];
 // Exercise 2: Remove the first member of the array.
 // Write your code here:
 
+// teamMembers.shift();
+// console.log(teamMembers);
 
 
 
 // Exercise 3: Remove the last member of the array.
 // Write your code here:
+
+// teamMembers.pop();
+// console.log(teamMembers);
+
 
 // Exercise 4: Add a new member "Alex" to the front of the array.
 // Write your code here:
