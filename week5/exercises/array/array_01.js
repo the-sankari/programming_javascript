@@ -63,8 +63,8 @@ const teamMembers = ["John", "Emily", "Mike", "Sarah"];
 // Exercise 11: Using `slice` to Copy the Entire Array
 // Write your code here:
 
-// const copyTeamMembers = teamMembers.slice();
-// console.log(copyTeamMembers);
+    const copyTeamMembers = teamMembers.slice();
+    console.log(copyTeamMembers);
 
 // Exercise 12: Combining Arrays with `concat`
 // Assume `newMembers` array is defined
@@ -79,6 +79,7 @@ let newMembers = ["Tina", "Dean"];
 
 
 
+
 // Exercise 14: Transforming members with `map` to be all written uppercase
 // Write your code here:
 
@@ -86,4 +87,5 @@ let newMembers = ["Tina", "Dean"];
 
 
 // const toUppperCase = teamMembers.map((member)=> member.toUpperCase());
-// console.log(toUppperCase);
+// console.log(toUppperCase); 
+
