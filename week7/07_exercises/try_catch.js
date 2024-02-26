@@ -94,11 +94,12 @@ function task5(array, index) {
   // Code here
   try {
     console.log(array, index);
-
     const arr = array.map((element) => {
       console.log(`Element: ${element}, Index: ${array.indexOf(element)}`);
     });
-    throw new Error(`${index} is out of bound in Task 5`);
+    if (index < 0 || index >= array.length) {
+      throw new Error(`${index} is out of bound in Task 5`);
+    }
   } catch (error) {
     console.error("403:", error.message);
   }
