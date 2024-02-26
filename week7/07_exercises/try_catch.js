@@ -63,23 +63,28 @@ Inside a try block, nest another try-catch block.
 Simulate an error in the nested try block and handle it in the nested catch block.
 */
 
+console.log("Task 4");
+
 function task4() {
   // Code here
-  console.log(task_4_name);
-  throw new Error("You attempted an error");
+
+  try {
+    console.log("Outer try block");
+    try {
+      console.log(task_4_name);
+      throw new Error("Error inside nested try ");
+    } catch (e) {
+      console.error("inner catch", e.message);
+    }
+  } catch (er) {
+    console.error("Outer", er.message);
+  } finally {
+    console.log("Execution completed Task 4");
+  }
 }
 
-try {
-  try {
-    throw new Error("Error inside try ");
-  } catch (e) {
-    console.error("inner catch", e.message);
-  }
-} catch (er) {
-  console.error("Outer", er.message);
-} finally {
-  console.log("Execution completed Task 4");
-}
+task4();
+
 // Task 5: Function with Try-Catch
 /*
 Create a function that uses try-catch to handle an array index out of bounds error.
@@ -87,21 +92,16 @@ Create a function that uses try-catch to handle an array index out of bounds err
 
 function task5(array, index) {
   // Code here
-try {
-  console.log(array, index);
+  try {
+    console.log(array, index);
 
-  const arr = array.map((element)=>{
-    console.log(`Element: ${element}, Index: ${array.indexOf(element)}`);
-  })
-  throw new Error(`${index} is out of bound in Task 5`);
-} catch (error) {
-  console.error('403:', error.message);
+    const arr = array.map((element) => {
+      console.log(`Element: ${element}, Index: ${array.indexOf(element)}`);
+    });
+    throw new Error(`${index} is out of bound in Task 5`);
+  } catch (error) {
+    console.error("403:", error.message);
+  }
 }
 
-}
-
-
-task5([1,2,3,4,5], 5);
-
-
-
+task5([1, 2, 3, 4, 5], 5);
