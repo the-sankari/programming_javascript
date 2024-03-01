@@ -11,16 +11,18 @@
   <body>
     <header>
       <h1>Car Database</h1>
-    </header>
-    <main>
       <form id="serach-car-form">
         <div class="form-group search">
           <label for="license-search">Search by License number</label
           ><br /><br />
-          <input type="search" name="license" id="license-search" />
-          <button type="submit" id="search-btn">Search Car</button>
+          <input type="search" name="license-search" id="license-search" />
+          <button type="submit">Search Car</button>
         </div>
       </form>
+      <div><p id="searchResult"></p></div>
+    </header>
+    <main>
+      
       <form id="add-car-form">
         <h2>Inser car data</h2>
         <div class="form-group">
