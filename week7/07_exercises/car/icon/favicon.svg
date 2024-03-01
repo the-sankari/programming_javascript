@@ -1,0 +1,12 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+>
+  <path
+    fill="red"
+    d="M56 24h-4V10a6 6 0 00-6-6H18a6 6 0 00-6 6v14H8c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h4v-4h36v4h4c2.21 0 4-1.79 4-4V28c0-2.21-1.79-4-4-4zm-6-8v8H14V16h36zm6 36H8V32h48v20z"
+  ></path>
+</svg>

@@ -47,7 +47,7 @@ const addCarData = () => {
     const price = parseFloat(priceInput.value).toFixed(2);
 
     if (isNaN(price || price <= 0)) {
-      throw new Error('Please input a valid numeric price value');
+      throw new Error("Please input a valid numeric price value");
     }
 
     // Get the input value
@@ -89,38 +89,58 @@ const displayCarData = () => {
 
   addCarData();
 
+  const makeElement = (row, col, prop) => {
+    col.textContent = prop;
+    return row.appendChild(col);
+  };
+
   cars.forEach((car) => {
     // create new row for each of the car object
     const row = document.createElement("tr");
-
     const licenseCell = document.createElement("td");
-    licenseCell.textContent = car.license;
-    row.appendChild(licenseCell);
-
     const makerCell = document.createElement("td");
-    makerCell.textContent = car.maker;
-    row.appendChild(makerCell);
-
     const modelCell = document.createElement("td");
-    modelCell.textContent = car.model;
-    row.appendChild(modelCell);
-
     const ownerCell = document.createElement("td");
-    ownerCell.textContent = car.owner;
-    row.appendChild(ownerCell);
-
     const priceCell = document.createElement("td");
-    priceCell.textContent = car.price;
-    row.appendChild(priceCell);
-
     const colorCell = document.createElement("td");
-    colorCell.textContent = car.color;
-    row.appendChild(colorCell);
+
+    // const inputs = [licenseCell, modelCell, ownerCell, priceCell, colorCell];
+
+    makeElement(row, licenseCell, car.license);
+    makeElement(row, makerCell, car.maker);
+    makeElement(row, modelCell, car.license);
+    makeElement(row, ownerCell, car.owner);
+    makeElement(row, priceCell, car.price);
+    makeElement(row, colorCell, car.color);
+
+
+    // const licenseCell = document.createElement("td");
+    // licenseCell.textContent = car.license;
+    // row.appendChild(licenseCell);
+
+    // const makerCell = document.createElement("td");
+    // makerCell.textContent = car.maker;
+    // row.appendChild(makerCell);
+
+    // const modelCell = document.createElement("td");
+    // modelCell.textContent = car.model;
+    // row.appendChild(modelCell);
+
+    // const ownerCell = document.createElement("td");
+    // ownerCell.textContent = car.owner;
+    // row.appendChild(ownerCell);
+
+    // const priceCell = document.createElement("td");
+    // priceCell.textContent = car.price;
+    // row.appendChild(priceCell);
+
+    // const colorCell = document.createElement("td");
+    // colorCell.textContent = car.color;
+    // row.appendChild(colorCell);
 
     tableBody.appendChild(row);
   });
 };
-
 
 // 'click' event on the add button that prevents the default methods, display the car data in the console for now
 carAddbtn.addEventListener("click", (e) => {
