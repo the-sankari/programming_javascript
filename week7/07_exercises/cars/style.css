@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-form-container {
+  flex: 1;
+  background-color: #faebd7;
+  height: 70%;
+  /* color: aliceblue; */
+}
+
+.car-list {
+  flex: 1;
+  background-color: rgb(210, 171, 119);
+  height: 70%;
+  padding: 10px;
+}
+.form-group {
+  /* background-color: aqua; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group > div {
+  /* background-color:rgb(87, 87, 201); */
+  margin: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+input {
+  padding: 10px 10px;
+  /* margin-left: 5px; */
+  width: 50%;
+  max-width: 50%;
+  border-radius: 5px;
+  border: 0.2px solid gray;
+}
+
+label {
+  font-size: 1.2em;
+  border-bottom: 1px dashed black;
+  cursor: pointer;
+}
+
+#addCar {
+  background-color: #e8b778;
+  color: #111;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  min-width: 60%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+#addCar:hover {
+  background-color: #dea963;
+  box-shadow: 0px 0px 5px 1px #666;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  border: 1px solid #222;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+thead {
+  background-color: #aacdeb;
+}
+
+th,
+td {
+  border: 1px solid #555;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: aliceblue;
+}
+
+tbody > tr:nth-of-type(odd) {
+  background-color: rgb(186, 197, 206);
+}
