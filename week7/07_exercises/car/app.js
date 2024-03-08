@@ -29,7 +29,6 @@ const addCarData = (e) => {
 
     if (!license || !maker || !model || !owner || !price || !color) {
       throw new Error("input field should not be empty");
-      return;
     }
     //   create new car object
     const newCar = new Car(license, maker, model, owner, price, color);
