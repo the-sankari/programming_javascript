@@ -1,0 +1,12 @@
+.pokemons{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+}
+
+.pokemons>div{
+    
+    background-color: antiquewhite;
+    padding: 10px;
+    text-align: center;
+}
