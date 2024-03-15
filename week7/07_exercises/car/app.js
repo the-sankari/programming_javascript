@@ -72,9 +72,9 @@ const searchCarByLicense = (e) => {
       throw new Error("Please provide a license number!!");
     }
 
-    const result = cars.find(({ license }) =>
-      license.toLowerCase().includes(searchInput)
-    );
+    const result = cars.find(({ license }) => {
+      return license.toLowerCase().includes(searchInput);
+    });
 
     displaySearch.textContent = result
       ? `Found ${license.maker}, ${license.model}, owned by ${license.owner} `

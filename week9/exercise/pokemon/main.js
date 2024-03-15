@@ -1,44 +1,44 @@
-const searchForm = document.querySelector(".serchPokemon");
 let pokemons = [];
-const fetchPokemon = async () => {
+const fetchData = async () => {
   const response = await fetch(
     "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0"
   );
-  const data = await response.json();
+  const data = await response.json(); // make the string to json
   // get the name from inside the results of the api
-  displayData(data.results);
   pokemons.push(...data.results);
+  displayData(data.results);
 };
-fetchPokemon();
 
+fetchData();
 
 const displayData = (data) => {
   const container = document.querySelector(".pokemons");
+  container.innerHTML = "";
+
   data.forEach((pokemon) => {
-    const pokemonElement = document.createElement("div");
-    pokemonElement.innerHTML = `<h2 class="name">${pokemon.name}</h2>`;
-    container.appendChild(pokemonElement);
+    const pokemonCard = document.createElement("div");
+    pokemonCard.innerHTML = `<h2>${pokemon.name}</h2>`;
+    container.appendChild(pokemonCard);
   });
 };
 
-const searchPokemon = (e) => {
-  e.preventDefault();
-  const pokemonSearch = document
-    .querySelector("#searchInput")
-    .value.trim()
-    .toLowerCase();
-  const displaySearch = document.querySelector(".searchResult");
-  if (!pokemonSearch) {
-    displaySearch.textContent = "Please enter a pokemon name";
-    displaySearch.style.color = "red";
-  }
-
-  const result = pokemons.filter((pokemon) =>
-    pokemon.name.includes(pokemonSearch)
-  );
-  console.log(result.name);
-
-  //   displaySearch.textContent = result[0].name;
+const debounce = (func, delay) => {
+  let debounceTimer;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => func.apply(context, args), delay);
+  };
 };
 
-searchForm.addEventListener("submit", searchPokemon);
+const searchPokemons = (search) => {
+  const filteredData = pokemons.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(search.toLowerCase())
+  );
+  displayData(filteredData);
+};
+
+document.querySelector("#searchInput").addEventListener("input", (e) => {
+  searchPokemons(e.target.value);
+});

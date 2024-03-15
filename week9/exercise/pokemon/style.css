@@ -1,4 +1,14 @@
-.pokemons{
+body{
+    text-align: center;
+    background-color: #fffff0;
+}
+
+h1{
+    text-shadow: 0 0 10px orange;
+    color: orange;
+}
+
+.pokemons, .searchResult{
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 2rem;
@@ -9,4 +19,22 @@
     background-color: antiquewhite;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
 }
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search input{
+    height: 2.2rem;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid orange;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
