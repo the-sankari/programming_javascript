@@ -11,7 +11,7 @@ let pokemons = [];
 // };
 
 const fetchData = () => {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=500&offset=0")
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
     .then((response) => response.json())
     .then((json) => {
       // get each element and data with maping
@@ -36,12 +36,43 @@ const displayData = (data) => {
 
   data.forEach((pokemon) => {
     const pokemonCard = document.createElement("div");
-    pokemonCard.innerHTML = `<h2>${pokemon.name}</h2>
-    <p>Height: ${pokemon.height/10} m</p>
-    <p>Weight: ${pokemon.weight/10} kg</p>
+    const imageUrl =
+      pokemon.sprites.other.dream_world.front_default ??
+      pokemon.sprites.other["official-artwork"].front_default ??
+      "image.png";
+    const isFavorite = localStorage.getItem(pokemon.name) === "true";
+
+    const favoriteText = isFavorite ? "Unmark favorie" : "Mark favorite";
+    pokemonCard.innerHTML = `
+    <h2 class="name">${pokemon.name}</h2>
+    <img height="100"
+    src="${imageUrl}"
+    alt="${pokemon.name}"
+  />
+  <div class="desc">
+    <p>Height: ${pokemon.height / 10} m</p>
+    <p>Weight: ${pokemon.weight / 10} kg</p>
+    <button id="favButton" data-name="${pokemon.name}">${favoriteText}</button>
+  </div>
+
     `;
     container.appendChild(pokemonCard);
   });
+  addFavorite();
+};
+
+const toggleFavorite = (e) => {
+  const pokemonName = event.target.getAttribute("data-name");
+  const isFavorite = localStorage.getItem(pokemonName) === "true";
+  localStorage.setItem(pokemonName, !isFavorite);
+  console.log(pokemonName);
+};
+
+const addFavorite = () => {
+  const favButton = document.querySelectorAll("#favButton");
+  favButton.forEach((button) =>
+    button.addEventListener("click", toggleFavorite)
+  );
 };
 
 const debounce = (func, delay) => {
