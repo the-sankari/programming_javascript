@@ -1,15 +1,4 @@
 let pokemons = [];
-// const fetchData = async () => {
-//   const response = await fetch(
-//     "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0"
-//   );
-//   const data = await response.json(); // make the string to json
-
-//   // get the name from inside the results of the api
-//   pokemons.push(...data.results);
-//   displayData(data.results);
-// };
-
 const fetchData = () => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
     .then((response) => response.json())
@@ -54,7 +43,6 @@ const displayData = (data) => {
     <p>Weight: ${pokemon.weight / 10} kg</p>
     <button id="favButton" data-name="${pokemon.name}">${favoriteText}</button>
   </div>
-
     `;
     container.appendChild(pokemonCard);
   });
@@ -62,16 +50,19 @@ const displayData = (data) => {
 };
 
 const toggleFavorite = (e) => {
-  const pokemonName = event.target.getAttribute("data-name");
+  const pokemonName = e.target.getAttribute("data-name");
   const isFavorite = localStorage.getItem(pokemonName) === "true";
-  localStorage.setItem(pokemonName, !isFavorite);
+  localStorage.setItem(pokemonName, isFavorite);
   console.log(pokemonName);
 };
 
 const addFavorite = () => {
   const favButton = document.querySelectorAll("#favButton");
-  favButton.forEach((button) =>
-    button.addEventListener("click", toggleFavorite)
+  favButton.forEach((button) =>{
+    button.addEventListener("click", toggleFavorite);
+  
+  }
+
   );
 };
 
