@@ -114,30 +114,7 @@ const displayCarData = () => {
     makeElement(row, colorCell, car.color);
 
 
-    // const licenseCell = document.createElement("td");
-    // licenseCell.textContent = car.license;
-    // row.appendChild(licenseCell);
-
-    // const makerCell = document.createElement("td");
-    // makerCell.textContent = car.maker;
-    // row.appendChild(makerCell);
-
-    // const modelCell = document.createElement("td");
-    // modelCell.textContent = car.model;
-    // row.appendChild(modelCell);
-
-    // const ownerCell = document.createElement("td");
-    // ownerCell.textContent = car.owner;
-    // row.appendChild(ownerCell);
-
-    // const priceCell = document.createElement("td");
-    // priceCell.textContent = car.price;
-    // row.appendChild(priceCell);
-
-    // const colorCell = document.createElement("td");
-    // colorCell.textContent = car.color;
-    // row.appendChild(colorCell);
-
+  
     tableBody.appendChild(row);
   });
 };

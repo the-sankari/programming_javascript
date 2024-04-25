@@ -34,9 +34,6 @@ const addItem = (itemName, category) => {
   } else {
     extras.push(itemName);
   }
-
-  // console.log(`Item Name: ${itemName}`);
-  // console.log(`Category: ${category}`);
 };
 
 const removeItem = () => {};
