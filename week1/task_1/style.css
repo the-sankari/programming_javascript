@@ -10,6 +10,7 @@ body{
     /* text-align: center; */
     display: flex;
     justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -21,19 +22,19 @@ body{
     /* justify-content: center; */
     width: 70vw;
     height: 70vh;
-    background-color: #39247b;
-    box-shadow: 0 0 10px 0px rgb(209, 203, 214);
+    background-color: #2e2d31;
+    box-shadow: 0 0 5px 0px rgb(209, 203, 214);
 
 }
 
 h1{
-    color: red;
-    background-color: black;
+    color: #f3f3f3;
+    background-color: #333;
     padding: 10px 12px;
     text-align: center;
     margin: 10px 10px;
     width: 90%;
-    box-shadow: 0 0 10px 0px rgb(209, 203, 214);
+    box-shadow: 0 0 5px 0px rgb(209, 203, 214);
 }
 
 h3{
@@ -41,7 +42,7 @@ h3{
 }
 .para{
     width: 70%;
-    background: rgb(64, 18, 99);
+    background: #39373a;
     padding: 10px;
 }
 p{
