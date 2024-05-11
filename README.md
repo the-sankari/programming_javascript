@@ -1,4 +1,16 @@
-# Programming JavaScript
-Helsinki Business College
+# JavaScript Programming Course
+*Helsinki Business College*
 
+Welcome to the JavaScript programming course at Helsinki Business College! This syllabus outlines the topics we'll cover throughout the duration of the course.
 
+| Week | Date            | Topic                               | Description                              |
+|------|-----------------|-------------------------------------|------------------------------------------|
+| 1    | 10.-12.01.2023  | Introduction to JavaScript         | An overview of JavaScript, its history, and setting up the development environment. We'll also discuss the importance of JavaScript in modern web development, including its role in client-side scripting and interaction with HTML and CSS. |
+| 2    | 15.-19.01.2023  | Basic Syntax and Operations        | Understanding variables, data types, and basic operations in JavaScript. We'll practice writing simple scripts to reinforce these concepts, covering topics such as arithmetic operations, string manipulation, and type conversion.       |
+| 3    | 22.-26.01.2023  | Control Structures                 | Exploring conditionals and loops in JavaScript and how they affect program flow. We'll work on practical exercises to master these control structures, including if statements, switch statements, and various loop constructs such as for loops and while loops.                                 |
+| 4    | 29.01-02.02.2023| Functions and Scope                | Defining and invoking functions, understanding scope concepts, and the importance of function scope. We'll dive into practical examples and scenarios, covering topics such as function declarations, function expressions, hoisting, and lexical scoping.                    |
+| 5    | 05.-09.02.2023  | Arrays and Objects                 | Operations with arrays and objects, introduction to JSON, and how they are used to structure data in JavaScript. We'll work on manipulating complex data structures, covering topics such as array methods, object properties, and serialization and deserialization of JSON data.                         |
+| 6    | 12.-16.02.2023  | Error Handling and Debugging       | Techniques for error handling, debugging using try-catch blocks, and common debugging tools. We'll practice debugging real-world JavaScript code, including identifying and fixing common errors such as syntax errors, runtime errors, and logical errors.                                 |
+| 7    | 26.02-01.03.2023| Introduction to DOM Manipulation   | Basics of Document Object Model (DOM), selecting and manipulating elements on a web page using JavaScript. We'll create interactive web elements using DOM manipulation techniques, covering topics such as accessing DOM elements, modifying element properties, and handling DOM events.      |
+| 8    | 04.-08.03.2023  | Asynchronous JavaScript           | Working with asynchronous code, understanding callbacks, promises, async/await, and their role in handling asynchronous operations. We'll build asynchronous web applications, covering topics such as asynchronous programming patterns, chaining asynchronous operations, and error handling in asynchronous code.  |
+| 9    | 11.-15.03.2023  | JavaScript and Web APIs            | Utilizing Fetch API, local storage, and basics of Web APIs. We'll explore how to integrate external data and services into JavaScript applications, covering topics such as making HTTP requests, handling responses, and persisting data locally using web storage.                     |
